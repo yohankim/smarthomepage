@@ -3,13 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<script>
+	function move() {
+		location.href = "Main.html";
+	}
+
+	function exit() {
+		location.href = "login.html";
+	}
+	
+</script>
+
 </head>
 <body background="images/background02.jpg">
 
 <table width="100%" height="800px" style="background-color:#d3d3d3 ">
 <tr>
 <td>
-
+<div>
 <table align="center" width="400x" height="104" border="1" style="border-collapse: collapse;line-height: 2 ">
 <tr>
 <td width="100">구분</td> 
@@ -22,17 +34,37 @@
 <tr>
 <td width="100">이름</td> 
 <td>
-<input type="text" name="name" size="10" />
+<input type="text" name="name" size="15" />
 </td>
 </tr>
 
 <tr>
 <td width="100">연락 번호</td> 
-<td>3</td>
+<td>
+<input type="text" name="phone" size="5" />-
+<input type="text" name="phone" size="5"/>-
+<input type="text" name="phone" size="5"/>
+</td>
+
 </tr>
 
+<tr>
+<td align="right" style="border: 0" colspan="2">
+
+<div>
+<input type="button" value="확인" />
+</div>
+<div>
+<div>
+<button onclick="login" value="exit">취소</button>
+<a href="login.html" onclick="javascript:exit()"></a>
+</div>
+</div>
+</td>
+</tr>
 
 </table>
+</div>
 </table>
 
 </body>
