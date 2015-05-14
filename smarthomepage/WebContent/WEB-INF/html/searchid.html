@@ -5,9 +5,6 @@
 <title>Insert title here</title>
 
 <script>
-	function move() {
-		location.href = "Main.html";
-	}
 
 	function exit() {
 		location.href = "login.html";
@@ -18,11 +15,17 @@
 </head>
 <body background="images/background02.jpg">
 
-<table width="100%" height="800px" style="background-color:#d3d3d3 ">
+<table width="100%" height="800px" style="background-color:#d8e6eb ">
 <tr>
-<td>
-<div>
-<table align="center" width="400x" height="104" border="1" style="border-collapse: collapse;line-height: 2 ">
+<td  align="center">
+
+<table width="400" height="80">
+<tr>
+<td align="center">아이디 찾기</td>
+</tr>
+</table>
+
+<table width="400" height="104" border="1" style="border-collapse: collapse;line-height: 2 ">
 <tr>
 <td width="100">구분</td> 
 <td>
@@ -41,31 +44,28 @@
 <tr>
 <td width="100">연락 번호</td> 
 <td>
-<input type="text" name="phone" size="5" />-
-<input type="text" name="phone" size="5"/>-
+<input type="text" name="phone" size="5" /> - 
+<input type="text" name="phone" size="5"/> - 
 <input type="text" name="phone" size="5"/>
 </td>
 
 </tr>
-
+</table>
 <tr>
-<td align="right" style="border: 0" colspan="2">
+<td align="right" style="border: 0">
 
-<div>
+
 <input type="button" value="확인" />
-</div>
-<div>
-<div>
-<button onclick="login" value="exit">취소</button>
-<a href="login.html" onclick="javascript:exit()"></a>
-</div>
-</div>
+<button onclick="exit()" value="exit">취소</button>
 </td>
 </tr>
+<table>
 
 </table>
-</div>
+
+
 </table>
+
 
 </body>
 </html>
