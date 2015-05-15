@@ -8,25 +8,25 @@
 
 <script>
 	function move() {
-		location.href = "Main.jsp";
+		location.href = "../main/Main.jsp";
 	}
 	function popup() {
-		window.open("Main.jsp")
+		window.open("../main/Main.jsp")
 	}
 	function login() {
-		location.href = "info.jsp";
+		location.href = "../member/info.jsp";
 	}
 	
 </script>
 
 </head>
-<body background="images/background02.jpg">
+<body background="../images/background02.jpg">
 
 <div style="width: 100%" align="center">
 	<%=new java.util.Date()%>
 	
 	<h1>로그인</h1>
-	<img src="images/logo.png" alt="로고" width="245" height="68" border="0" />
+	<img src="../images/logo.png" alt="로고" width="245" height="68" border="0" />
 	
 	<p>
 	
@@ -55,11 +55,11 @@
 	</div>
 	
 	<div style="margin-top : 20px">
-	<img src="images/btn_login.gif" alt="" width="167" height="40" onclick="javascript:login()" />
+	<img src="../images/btn_login.gif" alt="" width="167" height="40" onclick="javascript:login()" />
 	</div>
 	
 	<div>
-	<a href="searchid.html" onclick="javascript:move()">아이디 찾기</a> | <a href="">비밀번호 찾기</a>
+	<a href="../searchid.jsp" onclick="javascript:move()">아이디 찾기</a> | <a href="">비밀번호 찾기</a>
 	<div>
 	<button onclick="popup()">팝업</button>
 	</div>
@@ -68,7 +68,7 @@
 	</div>
 	
 <audio autoplay loop>
-<source  src="images/Redfoo - New Thang (1).mp3" type="audio/mp3">
+<source  src="../images/Redfoo - New Thang (1).mp3" type="audio/mp3">
 </audio>
 
 </body>

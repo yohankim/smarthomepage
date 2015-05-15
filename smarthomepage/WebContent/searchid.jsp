@@ -9,13 +9,13 @@
 <script>
 
 	function exit() {
-		location.href = "login.html";
+		location.href = "login/login.jsp";
 	}
 	
 </script>
 
 </head>
-<body background="images/background02.jpg">
+<body background="../images/background02.jpg">
 
 <table width="100%" height="800px" style="background-color:#d8e6eb ">
 <tr>
