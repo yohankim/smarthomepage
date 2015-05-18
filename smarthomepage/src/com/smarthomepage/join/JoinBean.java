@@ -1,4 +1,4 @@
-package join;
+package com.smarthomepage.join;
 
 public class JoinBean {
 	private String id;
