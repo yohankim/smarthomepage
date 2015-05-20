@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!doctype html>
-<html lang="en">
+<html lang="kr">
 <head>
 <meta charset="UTF-8" />
 <title>인덱스 페이지</title>
@@ -34,29 +34,29 @@
 		</tr>
 		
 		<tr>
-			<td style="border: 1px solid #808080; width: 30%;"
+			<td style="border: 1px solid #808080; width: 30%;">
 			
-			></td>
+			</td>
 		</tr>
 		<tr>
-			<td style="border: 1px solid #808080; width: 30%;"
+			<td style="border: 1px solid #808080; width: 30%;">
 			
-			></td>
+			</td>
 		</tr>
 		<tr>
-			<td style="border: 1px solid #808080; width: 30%;"
+			<td style="border: 1px solid #808080; width: 30%;">
 			
-			></td>
+			</td>
 		</tr>
 		<tr>
-			<td style="border: 1px solid #808080; width: 30%;"
+			<td style="border: 1px solid #808080; width: 30%;">
 			
-			></td>
+			</td>
 		</tr>
 		<tr>
-			<td style="border: 1px solid #808080; width: 30%;"
-			
-			></td>
+			<td style="border: 1px solid #808080; width: 30%;">
+			<a href="part08.do">회원가입</a>
+			</td>
 		</tr>
 	</table>
 
