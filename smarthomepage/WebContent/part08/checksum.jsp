@@ -14,17 +14,26 @@
 			</td>
 		</tr>
 		
-		<tr style="width:100%; height:90%">
+		<tr style="width:100%; height:90%" align="center">
 			<td style="border: 1px solid gray; width:50%; height:100%; border-collapse: collapse">
 			 	<table style="border: 1px solid gray; width:400px; height:550px; border-collapse: collapse; margin: 10px">
 			 		<tr>
 			 			<td>
+			 			
 			 			</td>
 			 		</tr>
 			 	</table>
+			 	<input type="checkbox" name="check" value="동의"  />동의합니다.
 			</td>
 			<td style="border: 1px solid gray; width:50%; height:100%; border-collapse: collapse">
-			
+				<table style="border: 1px solid gray; width:400px; height:550px; border-collapse: collapse; margin: 10px">
+			 		<tr>
+			 			<td>
+			 			
+			 			</td>
+			 		</tr>
+			 	</table>
+			 	<input type="checkbox" name="check" value="동의"  />동의합니다.
 			</td>
 		</tr>
 		

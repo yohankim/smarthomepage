@@ -20,5 +20,17 @@
 			<a href="part03/join_form.do">바로가기</a>
 		</div>
 	</div>
+	<div>
+		<h3>체크박스 폼 샘플</h3>
+		<div>
+			<a href="part03/checkbox_form.do">바로가기</a>
+		</div>
+	</div>
+	<div>
+		<h3>셀렉트 박스 폼 샘플</h3>
+		<div>	
+			<a href="part03/selectbox_form.do">바로가기</a>
+		</div>
+	</div>
 </body>
 </html>
