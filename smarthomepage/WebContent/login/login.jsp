@@ -8,10 +8,10 @@
 
 <script>
 	function move() {
-		location.href = "../main/Main.jsp";
+		location.href = "../main/main.jsp";
 	}
 	function popup() {
-		window.open("../main/Main.jsp")
+		window.open("../main/main.jsp")
 	}
 	function login() {
 		location.href = "../member/info.jsp";

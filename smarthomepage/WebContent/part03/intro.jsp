@@ -8,10 +8,18 @@
 </head>
 <body>
 	<div>
-		<h3>로그인 폼 샘플</h3>
+		<h3>로그인 폼 샘플 (ID와 숫자 입력)</h3>
 
 		<div>
 			<a href="part03/login_form.do">바로가기</a>
+		</div>
+	</div>
+		
+		<div>
+		<h3>로그인2 폼 샘플(아이디와 패스워드 입력)</h3>
+
+		<div>
+			<a href="part03/login_form2.do">바로가기</a>
 		</div>
 	</div>
 	<div>
@@ -32,5 +40,6 @@
 			<a href="part03/selectbox_form.do">바로가기</a>
 		</div>
 	</div>
+
 </body>
 </html>
