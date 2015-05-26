@@ -16,6 +16,11 @@ public class JoinDemo extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html; charset=UTF-8");
 		String gender = request.getParameter("gender");
+		String name = request.getParameter("name");
+		String age = request.getParameter("age");
+		String id = request.getParameter("id");
+		String pwd = request.getParameter("pwd");
+		
 		String check_mail = request.getParameter("check_mail");
 		String content = request.getParameter("content");
 		
@@ -23,7 +28,15 @@ public class JoinDemo extends HttpServlet {
 		out.print("<html><body>");
 		out.println("당신이 입력한 정보입니다.<hr>");//hr은 밑에 선 하나 만드는거
 		out.println("성별 : <b>");
-		out.println(gender);//가져온 gender값 출력
+		out.println(gender + "</b>" + "<br>");//가져온 gender값 출력
+		out.println("이름 : <b>");
+		out.println(name + "</b>" + "<br>");
+		out.println("나이 : <b>");
+		out.println(age + "</b>" + "<br>");
+		out.println("ID : <b>");
+		out.println(id + "</b>" + "<br>");
+		out.println("비밀번호 : <b>");
+		out.println(pwd + "</b>" + "<br>");
 		out.println("</b><br> 메일 정보 수신 여부 : <b>");
 		out.println(check_mail);
 		out.println("<b><br>가입 인사 : <b><pre>");

@@ -32,7 +32,7 @@
 					</div>
 				</td>
 				<td class="td1" colspan="2">&nbsp;비밀번호 확인 :&nbsp;&nbsp;<input
-					type="password" name=pw2 onblur="pass1() class=" ta" /> <span
+					type="password" name=pw2 onblur="pass1() class="ta" /> <span
 					class="ta3" id="ch_pw2"></span>
 				</td>
 			</tr>

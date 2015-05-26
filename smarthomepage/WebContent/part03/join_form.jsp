@@ -12,6 +12,14 @@
 		<label for="gender">성 별 :</label>
 		<input type="radio" id="gender" name="gender" value="남자" checked="checked" /> 남자
 		<input type="radio" id="gender" name="gender" value="여자" /> 여자 <br /><br />
+		<label for="name">이 름 :</label>
+		<input type="text" id="name" name="name" /><br /><br />
+		<label for="age">나 이 :</label>
+		<input type="text" id="age" name="age" /><br /><br />
+		<label for="id">ID :</label>
+		<input type="text" id="id" name="id" /><br /><br />
+		<label for="pwd">비밀번호 :</label>
+		<input type="password" id="pwd" name="pwd" /><br /><br />
 		
 		<label for="check_mail">메일 정보 수신 여부 :</label>
 		<input type="radio" id="check_mail" name="check_mail" value="yes" checked="checked"/>수신
