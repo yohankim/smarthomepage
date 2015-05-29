@@ -10,7 +10,7 @@
 <body>
 <script>
 	alert("회원가입이 되셨습니다. 감사합니다 \n다시 로그인 해주세요");
-	location.href="../login/login.jsp";
+	location.href="../part03/login_form2.jsp";
 </script>
 	
 </body>

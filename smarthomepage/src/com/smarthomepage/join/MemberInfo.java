@@ -1,4 +1,4 @@
-package net.syntex.part03;
+package com.smarthomepage.join;
 
 import java.io.IOException;
 
@@ -9,13 +9,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/member/logout.do")
-public class LogoutDemo extends HttpServlet {
+@WebServlet("/member/member_list.do")
+public class MemberInfo extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/views/login_form.do");
-			dispatcher.forward(request, response);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/views/member_list.jsp");
+		dispatcher.forward(request, response);
 	}
 
 }

@@ -1,4 +1,4 @@
-package net.syntex.part03;
+package com.smarthomepage.join;
 
 import java.io.IOException;
 
@@ -9,13 +9,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/member/logout.do")
-public class LogoutDemo extends HttpServlet {
+@WebServlet("/member/remove.do")
+public class RemoveController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/views/login_form.do");
-			dispatcher.forward(request, response);
+		response.setContentType("text/html; charset=UTF-8");
+		String id = request.getParameter("id");
+		MemberBean bean = new MemberBean();
+		bean.setId(id);
+		
+		int num = RemoveServiceImple.getInstance().removeMember(bean);
+				System.out.println("서비스 단에 넘어온 숫자값 : " + num);
+				
 	}
 
 }

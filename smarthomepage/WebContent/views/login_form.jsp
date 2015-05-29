@@ -8,39 +8,36 @@
 <head>
 <meta charset="UTF-8" />
 <title>로그인 권한 허용 샘플</title>
-<script>
-function move() {
-	location.href = "${pageContext.request.contextPath}/main/main.jsp";
-}
-function join() {
-	location.href = "${pageContext.request.contextPath}/join/join.jsp"
-}
-function login() {
-	document.formld.method = "get";
-	document.formld.action = "${pageContext.request.contextPath}/part03/login_demo2.do"
-	document.formld.submit();
-	 /* location.href = "../member/info.jsp";  
-} 
-function idSearch() {
-	location.href = "";
-}
-function pwSearch() {
-	location.href = "";
-}
-function loginCheck() {//body와 body 사이를 document라 한다.
-	if(document.frm.userid.value.length == 0){
-		alert("아이디를 입력해주세요.");
-		frm.userid.focus(); /* 커서를 인풋텍스트 칸에 위치시킨다. 사용자 편의성. */
-		return false;
-	}
-	if(document.frm.pwd.value == ""){
-		alert("비밀번호를 입력해주세요.");
-		frm.pwd.focus(); /* 커서를 인풋텍스트 칸에 위치시킨다. */
+	<script type="text/javascript">
+		function join() {
+			location.href = "${pageContext.request.contextPath}/member/join_form.do"
+			return false;
 		}
-	return true;
-}
-
-</script>
+		function login() {
+			document.frm.method = "get";
+			document.frm.action = "${pageContext.request.contextPath}/member/main.do"
+			document.frm.submit();
+			/* location.href = "../member/info.jsp";  */
+		}
+		function idSearch() {
+			location.href = "";
+		}
+		function pwSearch() {
+			location.href = "";
+		}
+		function loginCheck() {//body와 body 사이를 document라 한다.
+			if (document.frm.userid.value.length == 0) {
+				alert("아이디를 입력해주세요.");
+				frm.userid.focus(); /* 커서를 인풋텍스트 칸에 위치시킨다. 사용자 편의성. */
+				return false;
+			}
+			if (document.frm.pwd.value == "") {
+				alert("비밀번호를 입력해주세요.");
+				frm.pwd.focus(); /* 커서를 인풋텍스트 칸에 위치시킨다. */
+			}
+			return true;
+		}
+	</script>
 </head>
 <body>
 
@@ -69,14 +66,14 @@ function loginCheck() {//body와 body 사이를 document라 한다.
 
 		<div style="margin-top: 50px">
 
-	<form name="frm" action="${pageContext.request.contextPath}/part03/login_demo2.do" name="formld">
-				
+	<form name="frm" action="${pageContext.request.contextPath}/member/login.do" onsubmit="loginCheck()" method="post">
+				<!--  -->
 		<label for="userid">아이디 :</label> 
 		<input type="text" name="id" id="id" size="20" placeholder="아이디를 입력해주세요."/><br />
 		<label for="password"> 암 호&nbsp :&nbsp </label>
 		<input type="password" name="pwd" id="pwd" size="20" placeholder="비밀번호를 입력해주세요." /><br />
 		<input type="submit" name="로그인" onclick="loginCheck()" />
-		<img src="${pageContext.request.contextPath}/images/login.jpg" alt="" style="margin-top: 10; cursor: pointer;" width="300" height="100" onclick="javascript:login()" />
+		<!-- <img src="../images/login.jpg" alt="" style="margin-top: 10; cursor: pointer;" width="300" height="100" onclick="login()" /> -->
 	</form>
 	
 	</div>
@@ -94,16 +91,18 @@ function loginCheck() {//body와 body 사이를 document라 한다.
 	</div>
 	
 	<div>
-	<a href="${pageContext.request.contextPath}/searchid.jsp" onclick="javascript:move()">아이디 찾기</a> | <a href="">비밀번호 찾기</a>
-	<div>
-	<img src="${pageContext.request.contextPath}/images/makeuser.gif" alt="" onclick="join()" style="margin-top: 7px; cursor: pointer" />
+	<a href="${pageContext.request.contextPath}/searchid.jsp">아이디 찾기</a> | <a href="">비밀번호 찾기</a>
+	</div>
 	
-	</div>
-	</div>
+	<div>
+	<img src="${pageContext.request.contextPath}/images/makeuser.gif" alt="" onclick="join()" 
+	style="margin-top: 7px; cursor: pointer"  />
+	</div><!--  -->
+	
 	
 	
 <audio autoplay loop>
-<source  src="${pageContext.request.contextPath}/images/Redfoo - New Thang (1).mp3" type="audio/mp3">
+<source  src="../images/Redfoo - New Thang (1).mp3" type="audio/mp3">
 </audio>
 
 </body>

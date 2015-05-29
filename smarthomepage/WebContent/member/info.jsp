@@ -19,7 +19,7 @@
 <td align="right">
 <a href="../member/info.jsp"><img src="../images/bt_home.gif" alt="홈" align="middle" width="58" height="28" /></a>
 <a href="../main/main.jsp"><img src="../images/bt_myinfo.gif" alt="나의정보" align="middle" width="81" height="28" /></a>
-<a href="../login/login.jsp"><img src="../images/bt_logout.gif" alt="로그아웃" align="middle" width="82" height="28" /></a>
+<a href="../part03/login_form2.jsp"><img src="../images/bt_logout.gif" alt="로그아웃" align="middle" width="82" height="28" /></a>
 </td>
 </tr>
 

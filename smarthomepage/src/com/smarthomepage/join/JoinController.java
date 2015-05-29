@@ -9,19 +9,31 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/join.do")//문서 자체를 노출시키면 공격자가 바로 들어갈수가 있음. 
+@WebServlet("/member/join.do")
 public class JoinController extends HttpServlet {
-	
-	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//user(request, response);
-		//System.out.println("doGet(request, response)호출");
-	}//end
+	private static final long serialVersionUID = 1L;
 
-	public void user(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setCharacterEncoding("UTF-8");
-		response.setContentType("test/html;charset=UTF-8");
-		PrintWriter out=response.getWriter();
-	}
-	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html; charset=UTF-8");
+		String gender = request.getParameter("gender");
+		String name = request.getParameter("name");
+		String age = request.getParameter("age");
+		String id = request.getParameter("id");
+		String pwd = request.getParameter("pwd");
+		
+		String check_mail = request.getParameter("check_mail");
+		String content = request.getParameter("content");
+		
+		MemberBean bean = new MemberBean();
+		bean.setId(id);
+		bean.setPwd(pwd);
+		bean.setName(name);
+		bean.setAge(age);
+		bean.setGender(gender);
+		
+		int num = MemberServiceImpl.getInstance().joinMember(bean);
+		System.out.println("서비스 단에서 넘어온 값 :" + num);
+		
 	}
 
+}

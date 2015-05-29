@@ -1,4 +1,4 @@
-package com.smarthomepage.hello ;
+package com.smarthomepage.util ;
 
 	class hello {
 		public static void main(String[] args) {

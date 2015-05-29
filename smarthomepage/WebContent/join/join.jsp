@@ -6,10 +6,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
-<body background="../images/background02.jpg">
+<body background="${pageContext.request.contextPath}/images/background02.jpg">
 
-	<form name="signin" method=get onsubmit="return check()"
-		action="./join/join.do">
+	<form name="signin" method=get onsubmit="return check()" action="join/join.do">
 		<table id="j_ta1">
 			<tr>
 				<td colspan="4" class="title" align="center" height="30px"

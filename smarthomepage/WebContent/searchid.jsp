@@ -9,7 +9,7 @@
 <script>
 
 	function exit() {
-		location.href = "login/login.jsp";
+		location.href = "../part03/login_form2.jsp";
 	}
 	
 </script>
