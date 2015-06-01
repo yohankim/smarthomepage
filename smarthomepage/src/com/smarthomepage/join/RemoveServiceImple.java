@@ -8,7 +8,7 @@ public static RemoveServiceImple getInstance(){
 	return instance;
 }
 @Override
-public int removeMember(MemberBean bean) {
-	return RemoveDAO.getInstance().removeMember(bean);
+public void removeMember(String id) {
+	RemoveDAO.getInstance().removeMember(id);
 	}
 }

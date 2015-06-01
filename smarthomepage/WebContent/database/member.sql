@@ -30,3 +30,7 @@ where id = '';
 
 <!-- 테이블의 컬럼을 조회할 때 -->
 desc member;
+
+<!-- 회원 정보 중 비밀번호를 수정할 때 -->
+update member set pwd = ''
+where id = '';

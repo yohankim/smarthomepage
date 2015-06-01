@@ -11,19 +11,19 @@ import javax.sql.DataSource;
 
 import com.smarthomepage.util.DBmanager;
 
-public class RemoveDAO {
+public class UpdateDAO {
 	Connection conn;
 	Statement stmt;
 	ResultSet rs;
 	PreparedStatement pstmt;
 
-	public RemoveDAO() {
+	public UpdateDAO() {
 		conn = DBmanager.getConnection();
 	}
 
-	private static RemoveDAO instance = new RemoveDAO();
+	private static UpdateDAO instance = new UpdateDAO();
 
-	public static RemoveDAO getInstance() {
+	public static UpdateDAO getInstance() {
 		return instance;
 	}
 
@@ -35,16 +35,17 @@ public class RemoveDAO {
 		conn = ds.getConnection();
 		return conn;
 	}
-	
-	public void removeMember(String id) {
-		String sql = "delete from member where id = '"+id+"' ";
+	/*위에 부분은 완성된  DAO에서 같이 사용해도 무방하므로 
+	 * 붙여넣되 클래스명만 일치시킨다
+	 * 다음으로 아래는 현재 클래스에 맞는 메소드를 생성해야 한다*/
+	public void updateMember(String id, String pwd){
+		String sql = "update member set pwd = '"+pwd+"' where id = '"+id+"'";
 		try {
 			stmt = conn.createStatement();
 			rs = stmt.executeQuery(sql);
 		} catch (Exception ex) {
 			ex.printStackTrace();
-			System.out.println("RemoveDAO에서 에러가 났음");
+			System.out.println("UpdateDAO에서 에러가 났음");
 		}
-
 	}
 }

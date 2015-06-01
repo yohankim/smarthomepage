@@ -11,19 +11,19 @@ import javax.sql.DataSource;
 
 import com.smarthomepage.util.DBmanager;
 
-public class RemoveDAO {
+public class UpdateMemberInfoDAO {
 	Connection conn;
 	Statement stmt;
 	ResultSet rs;
 	PreparedStatement pstmt;
 
-	public RemoveDAO() {
+	public UpdateMemberInfoDAO() {
 		conn = DBmanager.getConnection();
 	}
 
-	private static RemoveDAO instance = new RemoveDAO();
+	private static UpdateMemberInfoDAO instance = new UpdateMemberInfoDAO();
 
-	public static RemoveDAO getInstance() {
+	public static UpdateMemberInfoDAO getInstance() {
 		return instance;
 	}
 
@@ -35,16 +35,14 @@ public class RemoveDAO {
 		conn = ds.getConnection();
 		return conn;
 	}
-	
-	public void removeMember(String id) {
-		String sql = "delete from member where id = '"+id+"' ";
+	public void updateMemberInfo(String id, String name, String age){
+		String sql = "update member set name = '"+name+"', age = '"+age+"' where id ='"+id+"'";
 		try {
 			stmt = conn.createStatement();
 			rs = stmt.executeQuery(sql);
 		} catch (Exception ex) {
 			ex.printStackTrace();
-			System.out.println("RemoveDAO에서 에러가 났음");
+			System.out.println("UpdateMemberInfoDAO에서 에러가 났음");
 		}
-
 	}
 }

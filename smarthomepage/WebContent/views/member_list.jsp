@@ -12,8 +12,8 @@
 	Statement stmt = null;
 	ResultSet rs = null;
 	String driver = "jdbc:oracle:thin:@localhost:1521/xe";
-	String userId = "system";
-	String password = "oracle";
+	String userId = "hr";
+	String password = "hr";
 	String sql = "select * from member";
 %>
 <!doctype html>
