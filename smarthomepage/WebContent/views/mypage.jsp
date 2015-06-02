@@ -10,6 +10,7 @@
 <body>
 	<h1>마이 페이지입니다.</h1>
 	<div>
+	<form action="${pageContext.request.contextPath}/member/detail.do">
 		<lable for="myInfo">내 정보</lable>
 		<table>
 		<tr>
@@ -22,18 +23,22 @@
 			<th>성별</th>
 		</tr>
 		<tr>
-		<td>이름</td>
-		<td>아이디</td>
-		<td>나이</td>
-		<td>성별</td>
+		<td><%=request.getAttribute("name")%></td>
+		<td><%=request.getAttribute("id")%></td>
+		<td><%=request.getAttribute("age")%></td>
+		<td><%=request.getAttribute("gender")%></td>
 		</tr>
 		
 	</table>
+	</form>
 	</div>
 	<div>
-		<span> <a
-			href="${pageContext.request.contextPath}/member/updatePwd.do">정보수정</a>
-		</span> 
+		<label for="updatePwd"> 비밀번호 변경</label>
+		<form action="${pageContext.request.contextPath }/member/updatePwd.do">
+			<label for="pwd">수정할 비밀번호 :</label>
+			<input type="password" id="pwd" name="pwd" />
+			<input type="submit" value="전 송" />
+		</form>
 	</div>
 
 	<div>

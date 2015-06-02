@@ -13,30 +13,22 @@
 			location.href = "${pageContext.request.contextPath}/member/join_form.do"
 			return false;
 		}
+	
 		function login() {
-			document.frm.method = "get";
-			document.frm.action = "${pageContext.request.contextPath}/member/main.do"
-			document.frm.submit();
-			/* location.href = "../member/info.jsp";  */
-		}
-		function idSearch() {
-			location.href = "";
-		}
-		function pwSearch() {
-			location.href = "";
-		}
-		function loginCheck() {//body와 body 사이를 document라 한다.
-			if (document.frm.userid.value.length == 0) {
+			if (document.frm.id.value.length == 0) {
 				alert("아이디를 입력해주세요.");
-				frm.userid.focus(); /* 커서를 인풋텍스트 칸에 위치시킨다. 사용자 편의성. */
+				frm.id.focus(); /* 커서를 인풋텍스트 칸에 위치시킨다. 사용자 편의성. */
 				return false;
 			}
 			if (document.frm.pwd.value == "") {
 				alert("비밀번호를 입력해주세요.");
 				frm.pwd.focus(); /* 커서를 인풋텍스트 칸에 위치시킨다. */
+				return false;
 			}
-			return true;
+			document.frm.submit();
 		}
+		
+		
 	</script>
 </head>
 <body>
@@ -66,14 +58,22 @@
 
 		<div style="margin-top: 50px">
 
-	<form name="frm" action="${pageContext.request.contextPath}/member/login.do" onsubmit="loginCheck()" method="post">
+	<%-- <form name="frm" action="${pageContext.request.contextPath}/member/login.do" onsubmit="loginCheck()" method="post">
 				<!--  -->
 		<label for="userid">아이디 :</label> 
 		<input type="text" name="id" id="id" size="20" placeholder="아이디를 입력해주세요."/><br />
 		<label for="password"> 암 호&nbsp :&nbsp </label>
 		<input type="password" name="pwd" id="pwd" size="20" placeholder="비밀번호를 입력해주세요." /><br />
 		<input type="submit" name="로그인" onclick="loginCheck()" />
-		<!-- <img src="../images/login.jpg" alt="" style="margin-top: 10; cursor: pointer;" width="300" height="100" onclick="login()" /> -->
+		<img src="../images/login.jpg" alt="" style="margin-top: 10; cursor: pointer;" width="300" height="100" onclick="login()" />
+	</form> --%>
+	<form name="frm" action="${pageContext.request.contextPath}/member/login.do" method="post">
+				<!--  -->
+		<label for="userid">아이디 :</label> 
+		<input type="text" name="id" id="id" size="20" placeholder="아이디를 입력해주세요."/><br />
+		<label for="password"> 암 호&nbsp :&nbsp </label>
+		<input type="password" name="pwd" id="pwd" size="20" placeholder="비밀번호를 입력해주세요." /><br />
+		<img src="../images/login.jpg" alt="" style="margin-top: 10; cursor: pointer;" width="300" height="100" onclick="login();" />
 	</form>
 	
 	</div>
@@ -95,7 +95,7 @@
 	</div>
 	
 	<div>
-	<img src="${pageContext.request.contextPath}/images/makeuser.gif" alt="" onclick="join()" 
+	<img src="${pageContext.request.contextPath}/images/makeuser.gif" alt="" onclick="return join()" 
 	style="margin-top: 7px; cursor: pointer"  />
 	</div><!--  -->
 	
