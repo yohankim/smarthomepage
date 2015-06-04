@@ -13,5 +13,9 @@
 		<input type="file" name="imageFile" id="imageFile" />
 		<input type="submit" value="이미지 전송" />
 	</form>
+	
+	<div>
+		<img src="${pageContext.request.contextPath }/images/<%=request.getAttribute("imageName") %>" alt="" />
+	</div>
 </body>
 </html>

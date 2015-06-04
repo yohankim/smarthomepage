@@ -34,3 +34,7 @@ desc member;
 <!-- 회원 정보 중 비밀번호를 수정할 때 -->
 update member set pwd = ''
 where id = '';
+
+<!-- 이름으로 비밀번호 찾기 -->
+select from member
+where name = '김요한';

@@ -27,7 +27,15 @@
 			}
 			document.frm.submit();
 		}
+		function searchId() {
+			window.open("${pageContext.request.contextPath}/member/searchIdForm.do","newone","scrollbars,toolbar=no,location=no,directories=no,status=no,menubar=yes,resizable=yes,width=600,height=500,top=200,left=500");
 		
+		}
+		
+		function searchPwd() {
+			window.open("${pageContext.request.contextPath}/member/searchPwdForm.do","newone","scrollbars,toolbar=no,location=no,directories=no,status=no,menubar=yes,resizable=yes,width=600,height=500,top=200,left=500");
+			
+		}
 		
 	</script>
 </head>
@@ -91,7 +99,7 @@
 	</div>
 	
 	<div>
-	<a href="${pageContext.request.contextPath}/searchid.jsp">아이디 찾기</a> | <a href="">비밀번호 찾기</a>
+	<a href="#" onclick="searchId()">아이디 찾기</a> | <a href="#" onclick="searchPwd()">비밀번호 찾기</a>
 	</div>
 	
 	<div>

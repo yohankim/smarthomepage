@@ -32,6 +32,11 @@
 	</table>
 	</form>
 	</div>
+	
+	<div>
+		<h3><a href="${pageContext.request.contextPath }/image/page.do">이미지 올리기 바로가기</a></h3>
+	</div>
+	
 	<div>
 		<label for="updatePwd"> 비밀번호 변경</label>
 		<form action="${pageContext.request.contextPath }/member/updatePwd.do">
